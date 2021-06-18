@@ -32,6 +32,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const buf = await buffer(req);
     const secret = req.headers["stripe-signature"];
 
+    console.log("kkkk");
+
     let event: Stripe.Event;
 
     try {
